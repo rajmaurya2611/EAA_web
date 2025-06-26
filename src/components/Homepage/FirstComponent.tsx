@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
-import landingImage from "../../assets/Group 30.png";
+import landingImage from "../../assets/Group 30.png"; // Replace with your actual image path
+import defaultBadge from "../../assets/google-play-black.svg";
+import hoverBadge from "../../assets/google-play-white.svg";
+
+const playstoreLink = "https://play.google.com/store/apps/details?id=com.bestofluck.engineersataktu";
 
 /**
  * FirstComponent
@@ -16,8 +20,9 @@ const FirstComponent: React.FC = () => {
     window.scrollTo({ top: 0, left: 0 });
   };
 
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <section className="bg-[#ECF7FB] font-montserrat pt-32">
+    <section className="bg-[#ECF7FB] font-montserrat pt-32 pb-16">
       <div className="relative flex flex-col md:flex-row items-center justify-between max-w-screen-xl mx-auto px-6 lg:flex-row items-center justify-between md:px-16 xl:px-0 ">
         {/* Left: Text Section */}
         <div className="md:w-1/2 pl-6 space-y-6">
@@ -28,24 +33,21 @@ const FirstComponent: React.FC = () => {
            <h1 className="font-semibold text-[#ACB25C] text-3xl pb-0 mt-0 ">
             Your Ultimate Engineering Companion!
           </h1>
-          <Button
-            type="primary"
-            size="large"
-            onClick={handleClick}
-            style={{
-              backgroundColor: "#7B83FF",
-              color: "#fff",
-            }}
-            className="
-  font-semibold
-    transform
-    transition-transform
-    duration-200
-    hover:scale-105
-  "
-          >
-            Download App
-          </Button>
+
+           <a
+                href={playstoreLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                <img
+                  src={isHovered ? hoverBadge : defaultBadge}
+                  alt="Get it on Google Play"
+                  loading="lazy"
+                  className="w-32 md:w-36 mt-6 lg:w-40 mb-6 transition duration-300 ease-in-out"
+                />
+              </a>
         </div>
 
         {/* Right: Image Section */}
