@@ -16,7 +16,7 @@ const Footer = () => {
         {/* Social + Email */}
         <div className="flex items-center justify-center space-x-2">
           <a
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/engineers-at-aktu-aa861a2b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -25,7 +25,7 @@ const Footer = () => {
             <LinkedinFilled style={{ fontSize: 24 }} />
           </a>
           <a
-            href="https://www.instagram.com/your-profile"
+            href="https://www.instagram.com/engineers_at_aktu?igsh=MWNwb2Q5eG94eGw5MQ=="
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
