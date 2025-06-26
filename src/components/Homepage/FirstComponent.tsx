@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import landingImage from "../../assets/Group 30.png"; // Replace with your actual image path
 import defaultBadge from "../../assets/google-play-black.svg";
 import hoverBadge from "../../assets/google-play-white.svg";
