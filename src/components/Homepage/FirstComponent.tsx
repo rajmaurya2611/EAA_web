@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import landingImage from "../../assets/Group 30.png"; // Replace with your actual image path
 import defaultBadge from "../../assets/google-play-black.svg";
@@ -13,12 +12,6 @@ const playstoreLink = "https://play.google.com/store/apps/details?id=com.bestofl
  * optimized for extra-large screens.
  */
 const FirstComponent: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("/products");
-    window.scrollTo({ top: 0, left: 0 });
-  };
 
   const [isHovered, setIsHovered] = useState(false);
   return (
