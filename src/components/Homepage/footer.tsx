@@ -9,9 +9,9 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#435268] text-white">
-      <div className="max-w-screen-xl mx-auto py-8 px-4 text-center space-y-4">
+      <div className="max-w-screen-xl mx-auto pt-8 pb-4 px-4 text-center space-y-4">
         {/* Title */}
-        <h2 className="text-2xl font-semibold">Engineers At AKTU</h2>
+        <h2 className="text-2xl sm:lg font-semibold">Engineers At AKTU</h2>
 
         {/* Social + Email */}
         <div className="flex items-center justify-center space-x-3">
